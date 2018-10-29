@@ -1,16 +1,16 @@
 # Sse - Super Simple Ecommerce
-Angular project - basic ecommerce with cart system
+Angular project - basic ecommerce with cart system<br/><br/>
 
-Modules: 
-App Module
-Core module
+Modules: <br/>
+App Module<br/>
+Core module<br/><br/>
 
-Services:
-Global Services: Product service (get the json data)
-Cart Services: products added to cart
-product.json (Products data)
+Services:<br/>
+Global Services: Product service (get the json data)<br/>
+Cart Services: products added to cart<br/>
+product.json (Products data)<br/><br/>
 
-==========================
+==========================<br/>
 
 ## Development server
 
