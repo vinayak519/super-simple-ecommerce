@@ -1,6 +1,16 @@
-# Sse
+# Sse - Super Simple Ecommerce
+Angular project - basic ecommerce with cart system
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+Modules: 
+App Module
+Core module
+
+Services:
+Global Services: Product service (get the json data)
+Cart Services: products added to cart
+product.json (Products data)
+
+==========================
 
 ## Development server
 
