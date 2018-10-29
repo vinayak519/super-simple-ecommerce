@@ -14,6 +14,7 @@ import { StoreComponent } from './store/store.component';
 import { CartService } from './shared/cart.service';
 import { CartComponent } from './store/cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './core/home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     StoreComponent,
     ProductListComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

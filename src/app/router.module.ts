@@ -6,8 +6,10 @@ import { ProductListComponent } from "./store/product-list/product-list.componen
 import { ProductComponent } from "./store/product/product.component";
 import { StoreComponent } from "./store/store.component";
 import { CartComponent } from "./store/cart/cart.component";
+import { HomeComponent } from "./core/home/home.component";
 
 const routes : Routes = [
+    {path: '', component: HomeComponent},
     {path: 'shop', component: StoreComponent, children: [
         {path: '', component: ProductListComponent},
         {path: ':id', component: ProductComponent}
