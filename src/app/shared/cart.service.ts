@@ -3,21 +3,7 @@ import { EventEmitter } from "@angular/core";
 export class CartService{
     updatedCart = new EventEmitter<any>();
 
-    productCart : any[] = [{
-        "id": "0",
-        "imgUrl": "http://placehold.it/450x450",
-        "name": "CHECK PRINT SHIRT",
-        "price": 110,
-        "quantity": 1,
-        "productTotal": 110
-    },{
-        "id": "1",
-        "imgUrl": "http://placehold.it/450x450",
-        "name": "OTHERS",
-        "price": 240,
-        "quantity": 1,
-        "productTotal": 240
-    }];
+    productCart : any[] = [];
 
     getCartItem(){
         return this.productCart;
