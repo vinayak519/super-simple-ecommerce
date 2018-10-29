@@ -1,0 +1,62 @@
+<section>
+  <div class="container">    
+      
+    <table *ngIf="cartItem.length > 0" class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr *ngFor="let item of cartItem; let i = index">
+          <th>
+            <figure class="product-img image is-128x128">
+              <img [src]="item.imgUrl" >
+            </figure>
+          </th>
+          <th><h4>{{item.name}}</h4></th>
+          <th>
+            <div>
+              <button [disabled]="item.quantity == 1" class="button" (click)="removeItem(i)">-</button>
+              <input class="input input-quantity" type="number" value="{{item.quantity}}"/>
+              <button class="button" (click)="addItem(i);">+</button>
+            </div>
+          </th>
+          <th><h4>{{item.price * item.quantity | currency}}</h4></th>
+          <th><h4><strong>{{item.price * item.quantity | currency}}</strong></h4></th>
+          <th><a class="remove-item" (click)="removeFromCart(i)">x</a></th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Total Cart -->
+    <div *ngIf="cartTotal != null && cartItem.length > 0" class="cart-total has-text-right">
+      <h4><strong>TOTAL: {{cartTotal | currency}}</strong></h4>
+    </div>
+
+    <!-- Empty cart -->
+    <section *ngIf="cartItem.length <= 0" class="hero is-small is-light is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Please add products to cart
+          </h1>
+          <h2 class="subtitle">
+            Your cart is empty :( <a routerLink="/shop">Click here to shop &raquo;</a>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Total Cart -->
+    <div *ngIf="cartTotal != null && cartItem.length > 0" class="has-text-right">
+      <a class="button is-danger is-large">Checkout</a>
+    </div>
+
+  </div>
+</section>

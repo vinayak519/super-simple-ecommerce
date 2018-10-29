@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from './shared/products.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sse';
+
+  constructor( private productlist: ProductService){}
+
+  ngOnInit(){
+    this.productlist.getProducts();
+  }
+
 }

@@ -1,0 +1,24 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://bulma.io">
+				<b>SSE</b>
+			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-end">
+				<a class="navbar-item" routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+				<a class="navbar-item" routerLink="shop" routerLinkActive="is-active">Shop</a>
+				<a class="navbar-item" routerLink="cart" routerLinkActive="is-active">
+					Cart
+					<span *ngIf="cartCount" class="cart-item">{{cartCount}}</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>

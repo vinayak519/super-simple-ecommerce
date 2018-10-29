@@ -1,0 +1,42 @@
+.cart-panel{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 15px;
+}
+
+.table{
+    width: 100%;
+}
+
+.table tr th{
+    text-transform: uppercase;
+    padding: 15px 10px;
+}
+
+.table tfoot tr{
+    padding: 10px 0px;
+}
+
+.input-quantity{
+    max-width: 60px;
+}
+
+.cart-total{
+    background-color: #ffffff;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.remove-item{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #999;
+}
