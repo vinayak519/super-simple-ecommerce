@@ -33,9 +33,9 @@ export class ProductComponent implements OnInit {
         if(this.productList == null || this.productList.length == 0){
           this.router.navigate(['/', 'shop']);
         }
-
       }
     );
+    
   }
 
   // On add to cart

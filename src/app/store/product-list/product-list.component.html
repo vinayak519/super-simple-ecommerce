@@ -1,14 +1,15 @@
 <section>
-    <div class="container">
-      <div class="columns">
-          <div class="column is-2" *ngFor="let item of productList[0]; let i = index">   
-            <figure class="product-img image">
-              <img [src]="item.imgUrl" >
-            </figure>
-            <h4>{{item.name}}</h4>
-            <h4>{{item.price | currency}}</h4>
-            <a routerLink="{{i}}" class="button button-default">Buy Now</a>
-          </div>
-        </div>
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-3" *ngFor="let item of productList[0]; let i = index">   
+        <a routerLink="{{i}}" class="product-wrap">
+          <figure class="product-img image">
+            <img [src]="item.imgUrl" >
+          </figure>
+          <h4 class="title is-6">{{item.name}}</h4>
+          <h4 class="product-price">{{item.price | currency}}</h4>
+        </a>
+      </div>
     </div>
+  </div>
 </section>

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProductService } from 'src/app/shared/products.service';
 import { StoreService } from '../store.service';
-
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -17,5 +16,4 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.productList = this.storeService.getProducts();
   }
-
 }
